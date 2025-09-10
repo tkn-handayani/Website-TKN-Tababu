@@ -1,0 +1,359 @@
+/* Style Umum */
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/*Hero*/
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* gambar background */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* overlay transparan */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* teks hero */
+.hero .overlay h1 {
+  position: absolute;
+  top: 35%; /* posisikan di tengah */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* pastikan di atas overlay */
+  text-align: center;
+  color: #efefef;
+}
+.hero .overlay h2 {
+  position: absolute;
+  top: 50%; /* posisikan di tengah */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* pastikan di atas overlay */
+  text-align: center;
+  color: #fff;
+}
+.hero .overlay .scroll-btn {
+  position: absolute;
+  top: 65%; /* posisikan di tengah */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* pastikan di atas overlay */
+  text-align: center;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 56px;
+  margin: 0;
+}
+
+.overlay h2 {
+  font-size: 56px;
+  margin: 0;
+}
+
+.scroll-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #a2d5c6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Sambutan */
+.row {
+  height: 100vh;
+}
+.column1 {
+  float: left;
+  width: 50%;
+}
+
+.column1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.column2 {
+  float: right;
+  width: 45%;
+  height: 100%;
+}
+
+.column2 h2 {
+  margin-top: 35%;
+  color: #cfffe2;
+  font-size: 56px;
+}
+
+.column2 p {
+  color: #a2d5c6;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sambutan {
+  background: #000000;
+}
+
+.nama-kepsek {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Fasilitas (Slider) */
+.fasilitas {
+  background: #000000;
+}
+
+.fasilitas h2 {
+  color: #cfffe2;
+}
+
+.slider {
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden; /* cegah bagian kosong tampil */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  animation: slide 20s infinite;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.caption {
+  position: absolute;
+  top: 10px; /* posisinya di atas */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(0);
+  } /* balik ke awal tanpa blank */
+}
+
+/* Ringkasan Sekolah */
+.menu-sekolah {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000000; /* sesuai screenshot */
+  color: #bfffd6; /* hijau pastel */
+}
+
+.menu-sekolah h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.menu-sekolah p {
+  margin-bottom: 30px;
+  color: #bfffd6;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #bfffd6;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 15px;
+  font-weight: bold;
+  text-align: left;
+  color: #000;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.pendaftaran {
+  background-color: #000;
+  color: #bfffd6;
+  text-align: left;
+  padding: 60px 20px;
+}
+
+.pendaftaran .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.pendaftaran .container img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.pendaftaran h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.pendaftaran p {
+  margin-bottom: 12px;
+  color: #bfffd6;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.info-item h3 {
+  font-size: 1.2rem;
+  color: #bfffd6;
+}
+
+.info-item p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.btn.daftar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #bfffd6;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn.daftar:hover {
+  background: #9fe0b9;
+}
+
+/* Scroll Reveal */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.7s ease-out; /* cepat */
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.exit {
+  opacity: 0;
+  transform: translateY(80px);
+}
